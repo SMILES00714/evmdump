@@ -150,7 +150,7 @@ where
             0x58 => GetPc,
             0x59 => MSize,
             0x5a => Gas,
-            0x5b => JumpDest(self.offset),
+            0x5b => JumpDest(self.offset - 1),
             0x60..=0x7f => {
                 let size = op - 0x5f;
                 Push(size, self.next_word(size)?)
