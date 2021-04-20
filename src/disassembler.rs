@@ -157,7 +157,7 @@ where
             }
             0x80..=0x8f => Dup(op - 0x7f),
             0x90..=0x9f => Swap(op - 0x8f),
-            0xa0..=0xa4 => Log(op - 0x9f),
+            0xa0..=0xa4 => Log(op - 0xa0),
             0xf0 => Create,
             0xf1 => Call,
             0xf2 => CallCode,
